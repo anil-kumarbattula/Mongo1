@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background: #212121; color: #fff;">
+    <ul id="language">
+        <li width="100px">Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName, idname) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}` //travers through all tress
+        li.setAttribute("id",`${idname}`);
+        li.style.width = "200px"
+        document.querySelector('#language').appendChild(li);
+    }
+    addLanguage("Java","java")
+    addLanguage("react.Js","react")
+
+    function optLang(langName, idname) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName)) //optimal
+        li.setAttribute("id",`${idname}`);
+        li.style.width = "200px"
+        document.querySelector('#language').appendChild(li);
+    }
+    optLang("GoLang", "golang")
+
+    //Edit
+    let addid = document.querySelector('li:first-child')
+    addid.id = "javascript";
+    let seclang = document.querySelector("li:nth-child(2)")
+    // seclang.innerHTML = "Cpp"
+    const newli = document.createElement("li")
+    newli.textContent = "Ruby"
+    seclang.replaceWith(newli)
+    newli.id = "ruby"
+    newli.style.width = "200px"
+    //remove
+    // let last = document.querySelector("li:last-child")
+    // last.remove()
+    document.querySelector('#language').addEventListener
+    ('click', (e)=> {
+        console.log(e.target);
+        let remove = e.target
+        remove.remove()
+    })
+
+</script>
+</html>
