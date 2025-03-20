@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter New Chat</title>
+</head>
+<body>
+    <h3>Write new chat..!</h3>
+    <form action="/chats" method="post">
+        <input type="text" name="from" placeholder="From.." style="display: block;" >
+        <br>
+        <textarea name="msg" placeholder="Write your message here.." style="display: block; height: 125px;"></textarea>
+        <br>
+        <input type="text" name="to" placeholder="To.." style="display: block;">
+        <br>
+        <button style="display: block;">Send</button>
+    </form>
+</body>
+</html>
