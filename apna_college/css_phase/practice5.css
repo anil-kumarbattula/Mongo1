@@ -1,9 +1,0 @@
-div{
-    height: 75px;
-    width: 75px;
-    background-color: black;
-}
-div:hover{
-    transform:translate(170px,170px);
-    transition-duration: 1s;
-}
